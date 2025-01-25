@@ -9,12 +9,11 @@ RUN apt-get update && apt-get install -y \
     vulkan-tools \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Zig
+# Install Zig 0.12.0
 WORKDIR /tmp
-RUN wget https://ziglang.org/download/0.11.0/zig-linux-x86_64-0.11.0.tar.xz \
-    && tar xf zig-linux-x86_64-0.11.0.tar.xz \
-    && mv zig-linux-x86_64-0.11.0 /usr/local/zig
-
+RUN wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz \
+    && tar xf zig-linux-x86_64-0.12.0.tar.xz \
+    && mv zig-linux-x86_64-0.12.0 /usr/local/zig
 # Copy project files
 WORKDIR /app
 COPY . .
